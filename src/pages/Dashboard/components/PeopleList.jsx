@@ -1,7 +1,8 @@
-import PeopleListItem from './PeopleListItem'
+import PeopleListItem from './PeopleListItem';
+import PropTypes from 'prop-types';
 
-function PeopleList(props) {
-  const { people } = props
+
+function PeopleList({people}) {
 
   return (
     <ul>
@@ -13,3 +14,8 @@ function PeopleList(props) {
 }
 
 export default PeopleList
+
+PeopleList.propTypes = {
+  people: PropTypes.array.isRequired,
+}
+
